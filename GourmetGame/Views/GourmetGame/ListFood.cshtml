@@ -1,0 +1,16 @@
+﻿@model IEnumerable<string>
+<div class="card">
+    <h2>Lista de Pratos Registrados</h2>
+
+    <form asp-action="PredictionFood" >
+        <label for="dishSelect">Selecione um prato:</label>
+        @* <select id="dishSelect" name="selectedDish">
+            @foreach (var dish in Model)
+            {
+                <option value="@dish">@dish</option>
+            }
+        </select> *@
+        <button type="submit" name="IsDish" value="true">Sim</button>
+        <button type="submit" name="IsDish" value="false">Não</button>
+    </form>
+</div>

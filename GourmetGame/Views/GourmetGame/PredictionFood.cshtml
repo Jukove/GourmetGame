@@ -1,0 +1,24 @@
+﻿@model GourmetGame.Models.PredictionFoodModel
+
+<div class="card text-center p-4">
+    <h2>O prato que você pensou é @Model.DishName?</h2>
+    <form method="post" asp-action="PredictionFood">
+        <input name="selectedHint" type="hidden" value="@Model.Hint" />
+
+        <div class="d-flex justify-content-center my-3">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="isDishYes" name="IsDish" value="true" class="form-check-input" />
+                <label class="form-check-label" for="isDishYes">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="isDishNo" name="IsDish" value="false" class="form-check-input" />
+                <label class="form-check-label" for="isDishNo">Não</label>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-warning">Ok</button>
+        </div>
+    </form>
+</div>
+

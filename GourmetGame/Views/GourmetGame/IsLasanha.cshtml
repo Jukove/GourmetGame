@@ -1,0 +1,18 @@
+﻿<div class="card text-center p-4">
+    <h2>O prato que você pensou é Lasanha?</h2>
+    <form method="post" asp-action="IsLasanha">
+        <div class="d-flex justify-content-center my-3">
+            <div class="form-check form-check-inline">
+                <input type="radio" id="isLasanhaYes" name="isLasanha" value="true" class="form-check-input" />
+                <label class="form-check-label" for="isLasanhaYes">Sim</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="isLasanhaNo" name="isLasanha" value="false" class="form-check-input" />
+                <label class="form-check-label" for="isLasanhaNo">Não</label>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Ok</button>
+        </div>
+    </form>
+</div>

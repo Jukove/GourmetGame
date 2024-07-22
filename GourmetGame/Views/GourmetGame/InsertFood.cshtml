@@ -1,0 +1,17 @@
+﻿<div class="card text-center p-4">
+    <h2>Qual prato você pensou?</h2>
+    <form method="post" asp-action="InsertFood">
+        <div class="mb-3">
+            <label for="dishName" class="form-label">Nome do prato:</label>
+            <input type="text" id="dishName" name="DishName" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label for="hint" class="form-label">Dica:</label>
+            <input type="text" id="hint" name="Hint" class="form-control" required />
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary me-2 col-2">OK</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-secondary col-2">Cancelar</a>
+        </div>
+    </form>
+</div>

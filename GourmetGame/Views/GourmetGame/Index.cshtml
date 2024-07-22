@@ -1,0 +1,35 @@
+﻿<div id="divGourmet" class="text-center p-4">
+    <h2 class="mb-3">Pense em um prato que gosta</h2>
+    <form id="gourmetForm" method="post" asp-action="IsPasta">
+        <button type="submit" class="btn btn-primary">OK</button>
+    </form>
+</div>
+<div id="gameArea" class="mt-4"></div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#gourmetForm').on('submit', function (event) {
+                event.preventDefault();
+                $.post($(this).attr('action'), function (data) {
+                    $('#gameArea').html(data);
+                });
+                $('#divGourmet').hide();
+            });
+
+            $('#gameArea').on('submit', 'form', function (event) {
+                event.preventDefault();
+                $.post($(this).attr('action'), $(this).serialize(), function (data) {
+                    $('#gameArea').html(data);
+                });
+            });
+        });
+    </script>
+}
+</div>
+
+<script>
+
+
+</script>

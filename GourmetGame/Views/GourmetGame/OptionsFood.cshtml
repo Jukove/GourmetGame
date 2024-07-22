@@ -1,0 +1,19 @@
+﻿@model List<GourmetGame.Models.InsertDishesModel>
+
+<div class="card text-center p-4">
+    <h2 class="mb-3">O prato que você pensou é _____?</h2>
+
+    <form method="post" asp-action="PredictionFood" class="d-flex flex-column align-items-center">
+        <div class="mb-3">
+            <label for="dishSelect" class="form-label">Selecione um prato:</label>
+            <select id="dishSelect" name="selectedHint" class="form-select">
+                @foreach (var dish in Model)
+                {
+                    <option value="@dish.Hint">@dish.Hint</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-warning mt-2">Ok</button>
+    </form>
+</div>
